@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div className="App">
       <button onClick={() => setCount((preCount) => preCount - 1)}>-</button>
-      <h1>{count}</h1>
+      <h1>{count} hh</h1>
       <button onClick={() => setCount((preCount) => preCount + 1)}>+</button>
     </div>
   );
