@@ -22,6 +22,12 @@ const App = () => {
     searchMovies("avengers");
   }, []);
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      searchMovies(searchTerm);
+    }
+  };
+
   return (
     <div className="app">
       <h1>MovieLand</h1>
@@ -31,6 +37,7 @@ const App = () => {
           placeholder="Search for a movies..."
           value={searchTerm}
           onChange={(e) => setsearchTerm(e.target.value)}
+          onKeyDown={handleKeyDown}
         />
         <img
           src={SearchIcon}
