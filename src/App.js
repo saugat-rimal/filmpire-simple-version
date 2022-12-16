@@ -30,16 +30,21 @@ const App = () => {
 
   return (
     <div className="app">
-      <h1>MovieLand</h1>
+      <h1 aria-label="MovieLand" tabIndex={0}>
+        MovieLand
+      </h1>
 
-      <div className="search">
+      <div aria-label="search for movies" tabIndex={0} className="search">
         <input
           placeholder="Search for a movies..."
           value={searchTerm}
           onChange={(e) => setsearchTerm(e.target.value)}
           onKeyDown={handleKeyDown}
         />
+
         <img
+          aria-label="click to search for movies"
+          tabIndex={0}
           src={SearchIcon}
           alt="search-icon"
           onClick={() => searchMovies(searchTerm)}

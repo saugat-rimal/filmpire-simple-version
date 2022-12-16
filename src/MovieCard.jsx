@@ -1,6 +1,6 @@
 const MovieCard = ({ movie }) => {
   return (
-    <div className="movie">
+    <div className="movie" aria-label={movie.Title} tabIndex={0}>
       <div>
         <p>{movie.Year}</p>
       </div>
